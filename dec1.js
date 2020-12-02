@@ -185,6 +185,7 @@ let report = [1337, 1906, 2007, 1939, 818, 1556, 2005, 1722, 1484, 1381, 1682, 1
     1686,
     1456,
     1974]
+
 function sumOf2020(array, twentyTwenty){
     for(let i = 0; i < array.length -1; i++){
         for(let a = i +1; a < array.length; a++){
@@ -196,3 +197,16 @@ function sumOf2020(array, twentyTwenty){
     }
 }
 sumOf2020(report, 2020);
+
+function sumOfThree(array, twentyTwenty){
+    for(let i = 0; i < array.length -1; i++){
+        for(let a = i +1; a < array.length; a++){
+            for(let b = a + 1; b < array.length; b++)
+            if(array[i] + array[a] + array [b] === twentyTwenty){
+                console.log(array[i] + " and " + array[a] + " and " + array[b] + " add to 2020.")
+                console.log(array[i] * array[a] * array[b])
+            }
+        }
+    }
+}
+sumOfThree(report, 2020);
